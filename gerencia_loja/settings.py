@@ -78,7 +78,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "projeto_gerencia",
-        "USER": "admin",
+        "USER": "gerente",
         "PASSWORD": "123mudar",
         "HOST": "localhost",
         "PORT": "3306",
