@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "core",
-    "bootstrap5",
+    "bootstrap4",
     "stdimage",
 ]
 
@@ -78,8 +78,8 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "projeto_gerencia",
-        "USER": "gerente",
-        "PASSWORD": "123mudar",
+        "USER": "root",
+        "PASSWORD": "aleluia7777",
         "HOST": "localhost",
         "PORT": "3306",
     }
