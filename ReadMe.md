@@ -1,4 +1,4 @@
-### Congiguração do ambiente
+### Configuração do ambiente
 
 - [ ] Instalar dependências 
   - `pip install django whitenoise gunicorn django-bootstrap5 PyMySQL django-stdimage`
