@@ -12,20 +12,12 @@ def index(request):
 def contato(request):
     form = ContatoForm(request.POST or None)  # a vairável form será uma instância do nosso formulário
 
+    # retorna um QueryDict com todos os dados do formulário
+    # print(request.POST)
+
     if str(request.method) == "POST":
         if form.is_valid():
-            nome = form.cleaned_data["nome"]
-            email = form.cleaned_data["email"]
-            assunto = form.cleaned_data["assunto"]
-            mensagem = form.cleaned_data["mensagem"]
-
-            print(f"""
-            Nome: {nome}\n
-            email: {email}\n
-            assunto: {assunto}\n
-            mensagem: {mensagem}
-            """)
-
+            form.send_mail()
             messages.success(request, "Mensagem enviada com sucesso.")
         else:
             messages.error(request, "erro ao enviar a mensagem")
