@@ -17,7 +17,7 @@
 
     <!--
     o action do form indica qual ação será disparada quando o usuário enviar o formulário
-    no caso incocará a função contato da views.py
+    no caso invocará a função contato da views.py
     Dentro dos forms, SEMPRE inserir {% csrf_token %}
     -->
     <form action="{% url 'contato' %}" method="post" class="form" autocomplete="off">

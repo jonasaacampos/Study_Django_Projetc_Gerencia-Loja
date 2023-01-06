@@ -18,6 +18,11 @@
 - [ ] `python manage.py createsuperuser`
 - [ ] `python manage.py runserver`
 
+**Toda vez** que alterarmos o arquivo models, realizar as migrações:
+
+- `python .\manage.py makemigrations`
+- `python .\manage.py migrate`
+
 ### Ferramentas úteis
 
 Para listar todas as possibilidades dos Forms
@@ -32,6 +37,9 @@ for method in dir(forms):
 ## para ajuda    
 help(forms.CharField)
 ```
+
+Forms => não gravam no banco de dados
+Model Forms -> Gravam no banco de dados
 
 ## Planejamento do projeto e requisitos
 
