@@ -4,7 +4,8 @@ from django.contrib import messages
 from core.forms import ContatoForm, ProdutoModelForm
 
 
-def dev_show_data_product_pre_save(produto):
+def dev_show_data_product_pre_save(produto, form):
+    produto = form.save(commit=False)
     print(f"""
      nome: {produto.nome}\n
      preço: {produto.preco}\n
@@ -39,8 +40,7 @@ def produto(request):
     if str(request.method) == "POST":
         form = ProdutoModelForm(request.POST, request.FILES)
         if form.is_valid():
-            prod = form.save(commit=False)
-            dev_show_data_product_pre_save(prod)
+            form.save()
             messages.success(request, "Produto salvo com sucesso.")
             form = ProdutoModelForm()
         else:
