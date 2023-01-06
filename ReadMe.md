@@ -18,6 +18,21 @@
 - [ ] `python manage.py createsuperuser`
 - [ ] `python manage.py runserver`
 
+### Ferramentas úteis
+
+Para listar todas as possibilidades dos Forms
+```python
+#python .\manage.py shell
+from django import forms
+dir(forms)
+
+for method in dir(forms): 
+	print(method)
+
+## para ajuda    
+help(forms.CharField)
+```
+
 ## Planejamento do projeto e requisitos
 
 ### Escopo
