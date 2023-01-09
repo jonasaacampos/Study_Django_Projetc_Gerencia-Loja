@@ -10,9 +10,9 @@
 
 <h1>Controle de itens adicionais lanchonete gourmet Django</h1>
 
-> Painel administrativo de constrole de estoque e custo adicional para itens inseridos em lanches
-> Sistema web usando Django MTV
-> Banco de dados MySQL
+> - [x] Painel administrativo de constrole de estoque e custo adicional para itens inseridos em lanches
+> - [x] Sistema web usando Django MTV
+> - [x] Banco de dados MySQL
 
 <img alt="django logo" src="https://github.com/jonasaacampos/Study_Python-Django/blob/main/img/django-hexbin.png?raw=true" width=150 align=right>
 
