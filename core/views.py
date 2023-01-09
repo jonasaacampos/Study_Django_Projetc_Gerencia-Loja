@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib import messages
 
 from core.forms import ContatoForm, ProdutoModelForm
-
+from .models import Produto
 
 def dev_show_data_product_pre_save(produto, form):
     produto = form.save(commit=False)
@@ -15,7 +15,10 @@ def dev_show_data_product_pre_save(produto, form):
 
 
 def index(request):
-    return render(request, "index.html")
+    context = {
+        "produtos" : Produto.objects.all()
+    }
+    return render(request, "index.html", context)
 
 
 def contato(request):

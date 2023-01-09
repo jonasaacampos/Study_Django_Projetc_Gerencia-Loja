@@ -41,6 +41,28 @@ help(forms.CharField)
 Forms => não gravam no banco de dados
 Model Forms -> Gravam no banco de dados
 
+
+```html
+<!--Página padrão par aimportação do bootstrap-->
+
+{% load bootstrap4 %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    {% bootstrap_css %}
+</head>
+<body>
+
+
+{% bootstrap_javascript jquery="full" %}
+</body>
+</html>
+ 
+```
+
 ## Planejamento do projeto e requisitos
 
 ### Escopo
