@@ -1,0 +1,1 @@
+web: gunicorn Study_Django_Projetc_Gerencia-Loja.wsgi --log-file -
