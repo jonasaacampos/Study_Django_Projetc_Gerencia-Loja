@@ -1,10 +1,13 @@
 from pathlib import Path
 import dj_database_url
 
-# PosgreSQL no Heroku
+#######################
+# PosgreSQL no Heroku #
+#######################
 DATABASES = {
-    "default" : dj_database_url.config()
+    "default": dj_database_url.config()
 }
+########################
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -16,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-&4$b)j88%9spsige7fq&@4a9^p(cbvykw_a56#h3uawv(e0@+$"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -36,7 +39,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    # "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -72,16 +75,16 @@ WSGI_APPLICATION = "gerencia_loja.wsgi.application"
 # MySQL connection #
 ####################
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.mysql",
-#         "NAME": "projeto_gerencia",
-#         "USER": "root",
-#         "PASSWORD": "aleluia7777",
-#         "HOST": "localhost",
-#         "PORT": "3306",
-#     }
-# }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "projeto_gerencia",
+        "USER": "root",
+        "PASSWORD": "aleluia7777",
+        "HOST": "localhost",
+        "PORT": "3306",
+    }
+}
 
 
 ####################
@@ -128,8 +131,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 ##########################
 # CONFIGURAÇÕES DE EMAIL #
 ##########################
+
 ## DEV
-# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
 ## PROD
 """
 EMAIL_HOST = "localhost"

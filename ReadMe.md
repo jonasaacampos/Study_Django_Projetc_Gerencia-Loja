@@ -29,6 +29,24 @@ Código fonte e aplicação gratuito para quaisquer finalidades. Peço que se po
 <a href='https://www.linkedin.com/in/jonasaacampos'><img src='https://img.shields.io/badge/LinkedIn-Profile-informational?style=flat&logo=linkedin&logoColor=white&color=0D76A8'></a>
 </p>
 
+<h2>Índice</h2>
+
+- [Demo](#demo)
+  - [Frente de caixa](#frente-de-caixa)
+  - [Painel de gestão](#painel-de-gestão)
+- [Instalação](#instalação)
+  - [Configuração do ambiente](#configuração-do-ambiente)
+  - [Iniciar Projeto](#iniciar-projeto)
+  - [Ferramentas úteis](#ferramentas-úteis)
+- [Planejamento do projeto e requisitos](#planejamento-do-projeto-e-requisitos)
+  - [Escopo](#escopo)
+- [Deploy](#deploy)
+  - [Heroku](#heroku)
+- [Referências e Ferramentas](#referências-e-ferramentas)
+- [Contato](#contato)
+
+
+------
 
 ## Demo
 
@@ -48,16 +66,7 @@ Código fonte e aplicação gratuito para quaisquer finalidades. Peço que se po
       </a>
 </p>
 
-<!-- 
-<details>
-<summary>
-
-## Base de programação web
-</summary>
-
-</details> 
--->
-
+## Instalação 
 
 ### Configuração do ambiente
 
@@ -135,6 +144,53 @@ Model Forms -> Gravam no banco de dados
 **Regras de negócio**
 
 - [ ] Definir rotas administrativas do projeto, inserindo um include e criar um arquivo de rotas na aplicação
+
+
+<details>
+<summary>
+
+## Deploy
+</summary>
+
+### Heroku
+
+- Arquivo `settings.py`
+
+```python
+
+DEBUG = False
+
+# Descomentar (para trabalhar com arquivos estáticos)
+"whitenoise.middleware.WhiteNoiseMiddleware",
+
+# Comentar
+EMAIL_BACKEND
+
+# Instalar
+pip install dj_database_url psycopg2-binary
+#Adicionar importação no cabeçalho
+```
+
+- Criar arquivos para deploy no Heroku
+
+```python
+# Criar arquivo runtime.txt contendo a versão do python
+python --version
+
+# Criar o arquivo `Procfile` e inserir o comando
+web: gunicorn Study_Django_Projetc_Gerencia-Loja.wsgi --log-file -
+```
+- [baixar o heroku cli](https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli)
+
+```bash
+heroku --version
+heroku login
+
+# criar projeto
+heroku create django-lanches-jaac  --buildpack heroku/python
+```
+
+</details> 
 
 ## Referências e Ferramentas
 
